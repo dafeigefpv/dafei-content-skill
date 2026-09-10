@@ -33,6 +33,37 @@ GitHub → 小红书图文内容流水线技能集（@大飞的AI赋能笔记）
 
 #GitHub #开源项目 #AI编程 #程序员日常 #AIAgent #智能体 #技能日报 #项目日报 #每天一个神仙技能 #每天一个Github热门项目 #大飞的AI赋能笔记 #AI #skill #技能 #workbuddy #codex #claudecode #opencode #openclaw #hermes #豆包 #deepseek
 
+## 主题系统（10 套，两技能共用 `themes.py`）
+
+`themes.py` 是语义化令牌库，render.py 的 CSS 用 `$token` 占位、渲染时按主题填充。两技能共用同一份 `themes.py`，默认随日期自动轮换，也可手动指定。
+
+### 主题清单
+
+| 类型 | 名称 | 风格 | 主点缀色 |
+|---|---|---|---|
+| 浅色 | `cream` | 奶油砖红（原默认） | 砖红 `#c7442e` |
+| 浅色 | `klein` | 克莱因蓝·纸白科技感 | 克莱因蓝 `#002fa7` |
+| 浅色 | `forest` | 森野墨绿·沉稳极客 | 墨绿系 |
+| 浅色 | `swiss` | 瑞士现代·纯白+黑+包豪斯红 | 红 `#ff3300` |
+| 浅色 | `pastel` | 粉彩几何·粉蓝底+紫 | 紫 `#7c6aad` |
+| 浅色 | `split` | 双色拼接·蜜桃+薰衣草 | 薰衣草 `#8a6fb0` |
+| 深色 | `terminal` | GitHub 暗底 `#0d1117`+终端绿 | 终端绿 `#39d353` |
+| 深色 | `neon` | 海军蓝渐变+霓虹青/品红 | 霓虹青 `#00ffcc`·品红 `#ff00aa` |
+| 深色 | `signal` | 暗底+高亮橙 | 橙 `#FF5722` |
+| 深色 | `botanic` | 近黑+暖金/赤陶 | 暖金 `#d4a574` |
+
+> 浅色 `swiss/pastel/split` 与全部深色主题，配色语言参考 [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) 的 STYLE_PRESETS（拒绝 generic AI 配色，强调有性格的大胆强调色）。
+
+### 如何指定主题
+
+1. **自动轮换（默认）**：不写 `theme` 时按发布日期轮换，`day_of_year % 10`，相邻两天必不同；同一期的封面与详情卡强制同一主题（一套皮肤到底）。
+2. **content.json 指定**：在 content.json 顶层加 `"theme": "klein"` 即可锁定该主题（取值见上表）。
+3. **命令行覆盖（测试/预览用）**：
+   - trending：`python render.py --theme neon --outdir dist/preview --covers-only`（仅出封面）
+   - project：`python render.py --theme neon --outdir dist/preview`
+
+**约束**：系统使用单一 `ink` 令牌同时驱动封面与详情卡文字色，因此每套主题必须整浅或整深。frontend-slides 中「深底+浅纸」的双调签名（如 Notebook Tabs）无法干净映射，故未纳入；若需该效果，须把 `ink` 拆成 `cover_ink`/`card_ink` 两个令牌。
+
 ## 使用方式
 
 将任一技能文件夹放入 Agent 技能目录（如 `~/.workbuddy/skills/`），即可由 AI Agent 按其中的执行规范自动完成"抓取 → 创作 → 渲染 → 交付"全流程。渲染依赖 Python venv（requests / beautifulsoup4 / lxml / playwright / qrcode / pillow）。
