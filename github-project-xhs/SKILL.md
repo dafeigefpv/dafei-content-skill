@@ -24,6 +24,7 @@ description: GitHub 单项目深度报道 → 小红书图文的执行规范。�
 ## content.json 撰写规则
 
 - `date` 与 project.json 一致；`full_name` 必须与 project.json 一致（render 会校验）
+- `theme`（可选）：指定视觉主题，取值共 10 套（定义在项目 `themes.py`，与 trending 共用主题库）——浅色 6：`cream / klein / forest / swiss / pastel / split`，深色 4（参考 zarazhangrui/frontend-slides 风格）：`terminal`（GitHub 暗+终端绿）/ `neon`（海军蓝渐变+霓虹青/品红）/ `signal`（暗底+高亮橙）/ `botanic`（近黑+暖金/赤陶）；缺省按日期自动轮换。封面徽章/强调用第二点缀色 accent2，详情页编号/引用/点评用主点缀色 accent——两色已按主题配好，勿在 content.json 里手写颜色。深色主题下封面用 `$cover_bg` 渐变（叠加在格子纸网格之下），终端窗/黑卡/logo 自动带 $panel_border 描边（浅色主题为透明）。命令行可覆盖：`render.py --theme neon --outdir dist/xxx`
 - `brand="@大飞的AI赋能笔记"`；`comment_label="大飞点评"`；`pages` 默认 2（内容单薄可 1）
 - `cover_headline`：封面主标题（1-2 行，含 `[[...]]` 标记的词组会渲染成橙色强调，`<br>` 手动换行）；`cover_sub` 封面副文案（缺省用 intro_zh）；`cover_quote` 封面底部大字金句（可用项目信条/作者原话，缺省用 cover_tagline）；`cover_terminal`（可选）终端窗命令行，缺省取 steps[0].cmd + 固定 ok 行
 - `agent_prompt`（可选）：**小白指令**——不会装的用户可原样复制发给 AI Agent 的一句话，如「请从 GitHub 获取并安装 diagram-design 画图技能（cathrynlavery/diagram-design）」；缺省自动生成同款句式；渲染在 03 三步上手下方的橙色虚线框内

@@ -19,6 +19,7 @@ description: GitHub Trending → 小红书图文每日流水线的执行规范�
 ## content.json 撰写规则
 
 - `date` 必须与 data.json 一致；`brand="@大飞的AI赋能笔记"`；`comment_label="大飞点评"`
+- `theme`（可选）：指定视觉主题，取值共 10 套（定义在项目 `themes.py`）——浅色 6：`cream / klein / forest / swiss / pastel / split`，深色 4（参考 zarazhangrui/frontend-slides 风格）：`terminal`（GitHub 暗+终端绿）/ `neon`（海军蓝渐变+霓虹青/品红）/ `signal`（暗底+高亮橙）/ `botanic`（近黑+暖金/赤陶）；缺省按日期自动轮换（年内天数 % 10）。同一期封面与 5 张详情卡强制同主题。深色主题封面用 `$cover_bg` 渐变（浅色为平铺同色渐变，肉眼等同纯色）。命令行可覆盖：`render.py --theme neon --outdir dist/xxx --covers-only`（测试/预览用）
 - ~~`hook`~~：**封面引导语已取消（2026-09-07 用户要求）**，封面不再显示 hook 行，render.py 也不再校验该字段（content.json 里残留的 hook 字段会被忽略）
 - `cover_title`：两行大标题，可适度变化
 - 每仓库字段：

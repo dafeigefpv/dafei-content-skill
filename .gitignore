@@ -1,0 +1,13 @@
+# Rendered output (PNG / txt produced by render.py)
+dist/
+
+# Personal memory / automation state
+.workbuddy/
+
+# Runtime fetch artifacts (regenerated every run)
+data.json
+project.json
+
+# Python caches
+__pycache__/
+*.pyc

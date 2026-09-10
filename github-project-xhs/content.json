@@ -1,0 +1,122 @@
+{
+  "date": "2026-09-08",
+  "full_name": "cathrynlavery/diagram-design",
+  "brand": "@大飞的AI赋能笔记",
+  "comment_label": "大飞点评",
+  "pages": 2,
+  "cover_tagline": "让 AI 画出设计师不嫌弃的架构图",
+  "selling": "39 种编辑级图示，把『AI 画的丑图』这个词杀死在 2026",
+  "intro_zh": "Claude Code / Codex / Pi 通用的画图技能：读你的网站自动配品牌色，输出自包含的 HTML+SVG 图示。",
+  "problem": "每次让 AI 画图，得到的全是通用圆角框和投影，要么配 Figma 手调半小时，最后干脆不放图。\n作者 Cathryn Lavery（BestSelf.co 创始人）被逼着做了这个技能：39 种编辑级图示，强调色只留给最该看的 1-2 处。",
+  "highlights": [
+    {
+      "title": "39 种图示类型",
+      "text": "v2.5.10 又新增桑基、鱼骨、Wardley 地图等 10 种布局语法，覆盖面拉满。"
+    },
+    {
+      "title": "编辑级审美，不是模板货",
+      "text": "信条是『最高质量的动作是删除』：去阴影去装饰，像杂志插图一样克制。"
+    },
+    {
+      "title": "零依赖输出",
+      "text": "自包含 HTML+SVG，无构建无 JS，浏览器直接打开，三种静态风格。"
+    },
+    {
+      "title": "品牌匹配 + 老图重绘",
+      "text": "读网站 60 秒配好色；draw.io / Mermaid 老图可重绘为指定尺寸。"
+    }
+  ],
+  "quote": "The highest-quality move is usually deletion. Every node earns its place.",
+  "steps": [
+    {
+      "k": "安装插件（Claude Code）",
+      "cmd": "/plugin marketplace add cathrynlavery/diagram-design",
+      "note": "接着执行 /plugin install diagram-design@diagram-design；Codex、Factory Droid、Pi、OpenCode 等客户端 README 里都有对应命令。"
+    },
+    {
+      "k": "开启自动更新（一次性）",
+      "cmd": "/plugin → Marketplaces → diagram-design → Enable auto-update",
+      "note": "第三方市场默认不自动更新，开一次即可；提示时运行 /reload-plugins。"
+    },
+    {
+      "k": "开画",
+      "cmd": "对话里直接说：用 diagram-design 画一张 XX 架构图",
+      "note": "想配品牌色，先让它读你的网站再画；/export-diagram 可导出成品。"
+    }
+  ],
+  "audience": [
+    {
+      "tag": "技术博客作者",
+      "note": "架构图、流程图终于配得上文章排版，不用再『图丑就不放了』。"
+    },
+    {
+      "tag": "后端/架构师",
+      "note": "时序图、ER 图、部署图一句话成稿，语义模式还能描述队列、信任边界这类行为。"
+    },
+    {
+      "tag": "产品/汇报党",
+      "note": "漏斗、用户旅程、看板图直接出编辑级观感，汇报 PPT 里不再像模板货。"
+    }
+  ],
+  "compare": "它不取代 Mermaid / draw.io，而是站在它们上面：可以把这两类工具的源文件重绘成编辑级 HTML+SVG。项目 2026 年 4 月创建，5 个月冲到 33.5k★，是目前 Agent 技能生态里最火的可视化技能。",
+  "comment": "这是我见过把『审美约束』写进代码里最彻底的项目——强调色只留 1-2 处、密度 4/10，规则越狠输出越稳。缺点也明说：图类型再多，复杂交互原型还得靠 Figma；但对日常文档和汇报，它就是最优解。",
+  "copy": {
+    "title": "AI 画图终于能放进方案里了：一条命令装好的 33.5k★ 外挂",
+    "body": "装上它的第一周，我把方案里所有 AI 画的丑图，全换掉了。\n\n它叫 diagram-design，5 个月 33.5k★，被十几万人验证过的『AI 审美外挂』——今天拆给你看：cathrynlavery/diagram-design。\n\n【📖 故事得从一张丑图说起】\n作者是 BestSelf.co 的创始人 Cathryn Lavery，被 AI 画的丑图逼到自立规矩。整个项目的信条只有一句话：最高质量的动作，是删除。\n\n规则狠到什么程度？信息密度目标 4/10，强调色只许给最该看的 1-2 处，阴影一律不要。听起来像受罪，出来的图却像杂志插图——因为每个元素都得『挣到』自己那个位置。\n\n【🎁 装上之后你会得到什么】\n① 39 种图示：架构、时序、ER 之外，桑基图、鱼骨图、用户旅程这些冷门款全都有；\n② 认得你的品牌：读一遍你的网站，60 秒配好同款配色；\n③ 零依赖：输出自包含 HTML+SVG，双击就能开，不装任何东西；\n④ 老图抢救：draw.io、Mermaid 的历史文件，能按指定尺寸和精细度重绘。\n\n也说实话：它只管静态图，复杂交互原型还是得回 Figma。\n\n安装两条命令的事，第 2 张卡片里有三步上手 + 小白指令，左滑看 →\n\n我认同它的信条：工具越克制，输出越稳。\n你会用它替换 draw.io 吗？评论区站队 👇\n\n【📣 关注我，每天播报 Github 最新的热门项目】",
+    "tags": [
+      "#GitHub",
+      "#开源项目",
+      "#AI编程",
+      "#程序员日常",
+      "#AIAgent",
+      "#智能体",
+      "#技能日报",
+      "#项目日报",
+      "#每天一个神仙技能",
+      "#每天一个Github热门项目",
+      "#大飞的AI赋能笔记",
+      "#AI",
+      "#skill",
+      "#技能",
+      "#workbuddy",
+      "#codex",
+      "#claudecode",
+      "#opencode",
+      "#openclaw",
+      "#hermes",
+      "#豆包",
+      "#deepseek"
+    ],
+    "title_alts": [
+      "AI 画图终于能放进方案里了：一条命令装好的 33.5k★ 外挂",
+      "别再忍 AI 的丑图了：这个项目 5 个月拿下 33.5k★",
+      "我给 AI 装了个『审美外挂』，39 种编辑级图示随口就有"
+    ]
+  },
+  "cover_headline": "5 个月 [[33.5k★]]，<br>它让 AI 画图不再丑",
+  "cover_sub": "把这套画图技能装进 Claude Code / Codex，39 种编辑级图示随口就有，不用注册，装完即用。",
+  "cover_quote": "最高质量的动作，<br>是[[删除]]。",
+  "agent_prompt": "请从 GitHub 获取并安装 diagram-design 画图技能（cathrynlavery/diagram-design）",
+  "cover_facts": [
+    {
+      "label": "图示类型",
+      "value": "39 种",
+      "desc": "v2.5.10 再加 10 种"
+    },
+    {
+      "label": "输出风格",
+      "value": "3 种",
+      "desc": "浅色 / 深色 / 全编辑"
+    },
+    {
+      "label": "品牌配色",
+      "value": "60 秒",
+      "desc": "读你的网站自动匹配"
+    },
+    {
+      "label": "上手成本",
+      "value": "2 条命令",
+      "desc": "装完即用，无构建"
+    }
+  ]
+}

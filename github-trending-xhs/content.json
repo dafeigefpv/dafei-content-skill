@@ -1,0 +1,144 @@
+{
+  "date": "2026-09-10",
+  "brand": "@大飞的AI赋能笔记",
+  "comment_label": "大飞点评",
+  "cover_title": [
+    "今日 GitHub",
+    "趋势精选"
+  ],
+  "repos": [
+    {
+      "rank": 1,
+      "full_name": "ayghri/i-have-adhd",
+      "selling": "专治 AI 编程助手说一堆废话不给你答案",
+      "intro_zh": "一个让 coding agent 不再把答案埋进长篇大论的技能，输出对 ADHD 人群友好：直接、有结构、少铺垫。今天 +4650 星登顶，说明大家都被 AI 绕弯子折磨够了。",
+      "highlights": [
+        "专治 coding agent 把答案埋在长输出里，强制直给结论",
+        "ADHD 友好输出：结构清晰、少铺垫、可直接执行",
+        "以 Claude Code 插件 / skill 形式接入，即装即用",
+        "MIT 协议，37 位贡献者共建，今日暴涨 4650 星"
+      ],
+      "install_cmd": "claude plugin install i-have-adhd@i-have-adhd",
+      "audience": [
+        "AI 编程重度用户",
+        "被 AI 废话折磨的人",
+        "Claude Code 玩家"
+      ],
+      "comment": "榜一实至名归——每个被 AI 长篇大论轰炸过的人都懂它的价值。",
+      "quote": "A skill to stop your coding agent from burying the answer. ADHD-friendly output."
+    },
+    {
+      "rank": 2,
+      "full_name": "Tencent/teamai-cli",
+      "selling": "腾讯出品：一条命令把全团队的 AI 装备管起来",
+      "intro_zh": "腾讯开源的团队 AI 装备管理器：把 skills、rules、MCP、知识库放进一个共享 repo，在 Claude Code、Codex、Cursor 等 AI 工具间统一分发。初始化一次，之后每次会话自动拉取最新配置。",
+      "highlights": [
+        "一条命令管理团队的 skills、rules、MCP 与知识库",
+        "跨 Claude Code、Codex、CodeBuddy、WorkBuddy、OpenCode、Cursor 统一分发",
+        "团队 repo 初始化后，AI 会话自动拉取最新配置，无需手动同步",
+        "teamai-hub 提供生产级模板，开箱即用"
+      ],
+      "install_cmd": "npm install -g teamai-cli",
+      "audience": [
+        "团队技术负责人",
+        "多 AI 工具用户",
+        "效能工具爱好者"
+      ],
+      "comment": "腾讯下场做 AI 团队基建，说明『给 AI 管装备』是真刚需。",
+      "quote": "TeamAI manages your team's skills, rules, MCP, and knowledge across Claude Code, Codex, CodeBuddy, WorkBuddy, OpenCode, Cursor, and other AI agents."
+    },
+    {
+      "rank": 3,
+      "full_name": "obra/superpowers",
+      "selling": "28.4 万星验证过的方法论：让 AI 像样地干活",
+      "intro_zh": "给 coding agent 的一整套软件开发方法论：先聊成 spec 再写码，真红绿 TDD + 子代理分工，agent 能自主连续干几个小时不跑偏。支持 Claude Code、Codex、Cursor、Gemini CLI 等十几种工具。",
+      "highlights": [
+        "完整软件开发方法论：先逼出 spec，分块确认后再动工",
+        "真红绿 TDD、YAGNI、DRY 内置，agent 不瞎写",
+        "子代理驱动开发：agent 可自主连续工作数小时不偏离计划",
+        "支持 Claude Code、Codex、Cursor、Gemini CLI、OpenCode 等十几种工具"
+      ],
+      "install_cmd": "git clone https://github.com/obra/superpowers",
+      "audience": [
+        "认真做项目的开发者",
+        "Agent 工作流玩家",
+        "技术团队 Leader"
+      ],
+      "comment": "模型越来越强，方法论反而是稀缺品——这仓库给 AI 上了班味十足的纪律。",
+      "quote": "An agentic skills framework & software development methodology that works."
+    },
+    {
+      "rank": 4,
+      "full_name": "pascalorg/editor",
+      "selling": "在浏览器里盖楼，还能让 AI Agent 帮你改图纸",
+      "intro_zh": "开源、本地优先的 3D 建筑编辑器，React Three Fiber + WebGPU 打造，浏览器或 CLI 都能跑。内置 MCP 服务，AI Agent 可以直接连接操作你的建筑模型。",
+      "highlights": [
+        "本地优先的开源 3D 建筑编辑器，WebGPU 渲染",
+        "浏览器里画，CLI 一条命令也能跑（npx @pascal-app/cli editor）",
+        "内置认证 MCP 服务，AI Agent 直连操作模型",
+        "项目数据存在本地 ~/.pascal，MIT 协议"
+      ],
+      "install_cmd": "npx @pascal-app/cli editor",
+      "audience": [
+        "建筑与空间设计师",
+        "3D 建模爱好者",
+        "AI Agent 开发者"
+      ],
+      "comment": "建筑行业 Agent 化的速度超出想象，本地优先 + MCP 的组合很对路。",
+      "quote": "An open-source, local-first 3D building editor built with React Three Fiber and WebGPU. Run it in the browser or from the CLI, and connect AI agents through MCP."
+    },
+    {
+      "rank": 5,
+      "full_name": "earthtojake/text-to-cad",
+      "selling": "打字就能出 CAD 图纸，机械人的 AI 技能库",
+      "intro_zh": "给 AI Agent 用的 CAD/CAE/CAM 技能库：让 AI 直接产出工程图纸。支持 STEP/STL/3MF 导出、URDF 机器人建模、SDF 仿真，Python 3.11+，MIT 协议。",
+      "highlights": [
+        "面向 CAD/CAE/CAM 的 Agent 技能库，AI 直接出工程图",
+        "支持 STEP / STL / 3MF 导出，直达下游制造流程",
+        "附带 URDF 机器人、SDF 仿真、SRDF MoveIt2 技能",
+        "Python 3.11+，MIT 协议，附官方文档站"
+      ],
+      "install_cmd": "git clone https://github.com/earthtojake/text-to-cad",
+      "audience": [
+        "机械工程师",
+        "3D 打印创客",
+        "机器人开发者"
+      ],
+      "comment": "CAD 的 Agent 化才刚开始，机械工程师现在上车正是时候。",
+      "quote": "A library of agent skills for CAD, CAE and CAM"
+    }
+  ],
+  "copy": {
+    "title": "让 AI 直说答案的技能火了：一天暴涨 4650 星，专治废话",
+    "title_alts": [
+      "让 AI 直说答案的技能火了：一天暴涨 4650 星，专治废话",
+      "别再被 AI 的长篇大论气到关窗口，榜一项目一天涨了 4650 星",
+      "从盖楼到出 CAD 图纸，这 5 个开源项目正在重写你的工作流"
+    ],
+    "body": "今天不绕弯子，先说结论：GitHub 今天最火的项目，一天暴涨 4650 星，就为了干一件事——让 AI 闭嘴，直说答案。\n\n【🤐 废话终结者】ayghri/i-have-adhd，总星 3.46 万、今日 +4650，登顶榜一。它给编程助手立规矩：输出必须先给行动、砍掉客套话，专为注意力有限的人优化。装上之后，AI 的回复从大段铺垫变成可以直接抄的指令。\n\n【🧰 团队装备库】Tencent/teamai-cli，腾讯出品，今日 +556。一条命令把团队的 skills、rules、MCP 和知识库管起来，还跨 Claude Code、Codex、Cursor 等一堆 AI 工具统一分发——团队 repo 初始化后，每次 AI 会话自动拉最新配置，不用手动同步。\n\n【📕 AI 上班守则】obra/superpowers，28.4 万总星的经典还在涨（今日 +688）。它是一整套软件开发方法论：先逼 agent 把需求聊成 spec，再走真红绿 TDD，子代理分组干活，一跑就是几个小时不跑偏。\n\n【🏗️ 浏览器里盖楼】pascalorg/editor，今日 +107。开源的本地优先 3D 建筑编辑器，React Three Fiber + WebGPU 打造，浏览器里就能画，还内置 MCP 服务让 AI Agent 直接连上改图纸。\n\n【✏️ 打字出图纸】earthtojake/text-to-cad，今日 +124。面向 CAD/CAE/CAM 的 Agent 技能库，支持 STEP/STL/3MF 导出，还带 URDF 机器人和 SDF 仿真技能——机械工程师进 AI 时代的第一站。\n\n左滑看 5 张详情卡，上手命令都帮你抄好了。\n今天哪一个戳中了你？评论区站个队。\n\n【📣 关注我，每天播报 Github 最新的热门项目】",
+    "tags": [
+      "#GitHub",
+      "#开源项目",
+      "#AI编程",
+      "#程序员日常",
+      "#AIAgent",
+      "#智能体",
+      "#技能日报",
+      "#项目日报",
+      "#每天一个神仙技能",
+      "#每天一个Github热门项目",
+      "#大飞的AI赋能笔记",
+      "#AI",
+      "#skill",
+      "#技能",
+      "#workbuddy",
+      "#codex",
+      "#claudecode",
+      "#opencode",
+      "#openclaw",
+      "#hermes",
+      "#豆包",
+      "#deepseek"
+    ]
+  }
+}
