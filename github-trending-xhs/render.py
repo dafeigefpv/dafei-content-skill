@@ -31,9 +31,9 @@ body { margin:0; background:$bg; font-family:'Microsoft YaHei','PingFang SC',san
 .cover .tag { font-family:'JetBrains Mono',Consolas,monospace; font-size:26px; letter-spacing:6px; color:$muted; }
 .cover .date { font-family:'JetBrains Mono',Consolas,monospace; font-size:26px; color:$ink; border-bottom:4px solid $accent; padding-bottom:6px; }
 .cover .hook { font-size:40px; color:$accent; font-weight:500; letter-spacing:3px; margin-top:120px; }
-.cover .title { font-size:132px; font-weight:500; line-height:1.22; margin-top:28px; color:$ink; }
+.cover .title { font-size:132px; font-weight:500; line-height:1.22; margin-top:96px; color:$ink; }
 .cover .title .hl { background:$accent; color:$accent_text; padding:0 26px; }
-.cover .list { margin-top:auto; border-top:1.5px solid $border2; padding-top:40px; display:flex; flex-direction:column; gap:30px; }
+.cover .list { margin-top:auto; margin-bottom:52px; border-top:1.5px solid $border2; padding-top:40px; display:flex; flex-direction:column; gap:30px; }
 .cover .list .row { display:flex; gap:26px; align-items:baseline; }
 .cover .list .rk { font-family:'JetBrains Mono',Consolas,monospace; font-size:40px; color:$accent; }
 .cover .list .rk2 { color:$muted; }
