@@ -191,13 +191,63 @@ def shot_with_overflow_check(page, html, w, h, out):
     return scale
 
 
+# ---- 三平台发布文案 / 标签格式 ----
+# 小红书用 #标签；微头条用 #话题# 双井号；微信贴图用【话题】（不堆 # 号）
+PLATFORM_FORMAT = {
+    "xhs": lambda t: f"#{t}",
+    "toutiao": lambda t: f"#{t}#",
+    "wechat": lambda t: f"【{t}】",
+}
+PLATFORM_LABELS = {"xhs": "小红书", "toutiao": "微头条", "wechat": "微信贴图"}
+
+
+def _norm_tag(t):
+    """规范化标签词：去掉已有的 # 前缀与【】包裹，返回纯词。"""
+    return (t or "").strip().lstrip("#").strip("【】").strip()
+
+
+def fmt_tags(platform, tags):
+    """按平台规则格式化标签词列表（tags 可为纯词或已带前缀）。"""
+    fn = PLATFORM_FORMAT[platform]
+    return " ".join(fn(_norm_tag(t)) for t in tags if _norm_tag(t))
+
+
+def get_copies(content):
+    """返回三平台文案 dict；兼容旧版单份 copy（自动复制到三平台）。"""
+    if "copies" in content and isinstance(content["copies"], dict):
+        c = content["copies"]
+        xhs = c.get("xhs") or content.get("copy")
+        toutiao = c.get("toutiao") or xhs
+        wechat = c.get("wechat") or xhs
+    else:
+        xhs = content.get("copy")
+        toutiao = xhs
+        wechat = xhs
+    return {"xhs": xhs, "toutiao": toutiao, "wechat": wechat}
+
+
+def write_copy(out_dir, copies):
+    """输出三段式 copy.txt：小红书 / 微头条 / 微信贴图。"""
+    parts = []
+    for plat in ("xhs", "toutiao", "wechat"):
+        cp = copies.get(plat) or {}
+        title = cp.get("title", "")
+        body = cp.get("body", "")
+        tags = fmt_tags(plat, cp.get("tags", []))
+        parts.append(f"========== {PLATFORM_LABELS[plat]} ==========\n{title}\n\n{body}\n\n{tags}")
+    text = "\n\n".join(parts)
+    (out_dir / "copy.txt").write_text(text, encoding="utf-8")
+
+
 def validate(data, content):
     errs = []
     if content.get("full_name") != data["repo"]["full_name"]:
         errs.append(f"full_name 不匹配: content={content.get('full_name')} data={data['repo']['full_name']}")
-    for k in ("selling", "intro_zh", "problem", "highlights", "steps", "audience", "comment", "copy"):
+    for k in ("selling", "intro_zh", "problem", "highlights", "steps", "audience", "comment"):
         if not content.get(k):
             errs.append(f"content 缺少 {k}")
+    if not (content.get("copies") or content.get("copy")):
+        errs.append("content 缺少 copy 或 copies（三平台文案）")
     if content.get("pages", 2) not in (1, 2):
         errs.append("pages 只能是 1 或 2")
     if content.get("pages", 2) == 2 and not content.get("steps"):
@@ -429,10 +479,9 @@ def main():
             shot_with_overflow_check(page, page2_html(data, content), W_DETAIL, H_DETAIL, out_dir / "02.png")
             print("  02.png (上手与点评)")
         browser.close()
-    copy = content["copy"]
-    copy_text = f"{copy['title']}\n\n{copy['body']}\n\n{' '.join(copy['tags'])}"
-    (out_dir / "copy.txt").write_text(copy_text, encoding="utf-8")
-    print(f"完成 → {out_dir}")
+    copies = get_copies(content)
+    write_copy(out_dir, copies)
+    print(f"完成 → {out_dir}（copy.txt 含 小红书/微头条/微信贴图 三段）")
 
 
 if __name__ == "__main__":

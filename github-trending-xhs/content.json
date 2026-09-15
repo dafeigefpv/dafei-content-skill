@@ -1,144 +1,212 @@
 {
-  "date": "2026-09-10",
+  "date": "2026-09-15",
   "brand": "@大飞的AI赋能笔记",
   "comment_label": "大飞点评",
   "cover_title": [
-    "今日 GitHub",
-    "趋势精选"
+    "GitHub 热榜",
+    "今日精选"
   ],
   "repos": [
     {
       "rank": 1,
-      "full_name": "ayghri/i-have-adhd",
-      "selling": "专治 AI 编程助手说一堆废话不给你答案",
-      "intro_zh": "一个让 coding agent 不再把答案埋进长篇大论的技能，输出对 ADHD 人群友好：直接、有结构、少铺垫。今天 +4650 星登顶，说明大家都被 AI 绕弯子折磨够了。",
+      "full_name": "JustVugg/colibri",
+      "selling": "纯 C 零依赖的小引擎，把 2.8T 大模型塞进你手头的硬件",
+      "intro_zh": "把显存、内存、硬盘当成一整块分级存储，专家参数按需从硬盘流式读取。纯 C、零引擎依赖，GLM-5.2/5.3、Kimi K3、DeepSeek V4 等 9 大模型家族，一个模型一个 C 文件今天就能跑。",
       "highlights": [
-        "专治 coding agent 把答案埋在长输出里，强制直给结论",
-        "ADHD 友好输出：结构清晰、少铺垫、可直接执行",
-        "以 Claude Code 插件 / skill 形式接入，即装即用",
-        "MIT 协议，37 位贡献者共建，今日暴涨 4650 星"
+        "744B 到 2.8T 参数的前沿 MoE 模型，消费级/异构硬件可跑",
+        "VRAM/RAM/存储统一分级调度，专家按需流式加载",
+        "纯 C 零依赖，每个模型家族一个 C 文件",
+        "coli chat / serve / web 统一前端，web 面板实时展示专家『大脑』"
       ],
-      "install_cmd": "claude plugin install i-have-adhd@i-have-adhd",
+      "install_cmd": "git clone https://github.com/JustVugg/colibri.git",
       "audience": [
-        "AI 编程重度用户",
-        "被 AI 废话折磨的人",
-        "Claude Code 玩家"
+        "本地部署党",
+        "硬件折腾玩家",
+        "大模型研究者"
       ],
-      "comment": "榜一实至名归——每个被 AI 长篇大论轰炸过的人都懂它的价值。",
-      "quote": "A skill to stop your coding agent from burying the answer. ADHD-friendly output."
+      "comment": "拿硬盘当内存用这套思路很野——速度没 SLA、语义有硬保证，研究者狂喜，生产环境要掂量。",
+      "quote": "Tiny engine, immense model."
     },
     {
       "rank": 2,
-      "full_name": "Tencent/teamai-cli",
-      "selling": "腾讯出品：一条命令把全团队的 AI 装备管起来",
-      "intro_zh": "腾讯开源的团队 AI 装备管理器：把 skills、rules、MCP、知识库放进一个共享 repo，在 Claude Code、Codex、Cursor 等 AI 工具间统一分发。初始化一次，之后每次会话自动拉取最新配置。",
+      "full_name": "alibaba/open-code-review",
+      "selling": "阿里内部用了两年的 AI 代码审查，今天开源了",
+      "intro_zh": "出身阿里内部官方 AI 代码审查助手：两年服务数万开发者、检出百万级代码缺陷，验证充分后开源。确定性流水线 + LLM Agent 混合架构，行级精准评论，内置 NPE、线程安全、SQL 注入等多语言规则。",
       "highlights": [
-        "一条命令管理团队的 skills、rules、MCP 与知识库",
-        "跨 Claude Code、Codex、CodeBuddy、WorkBuddy、OpenCode、Cursor 统一分发",
-        "团队 repo 初始化后，AI 会话自动拉取最新配置，无需手动同步",
-        "teamai-hub 提供生产级模板，开箱即用"
+        "阿里内部两年实战：数万开发者、百万级缺陷检出后开源",
+        "Agent 能读全文件、搜代码库，深度审查不止看 diff",
+        "同基座模型下 Precision/F1 显著更高，token 只用约 1/9",
+        "ocr scan 可整文件扫描，审陌生代码库也能用"
       ],
-      "install_cmd": "npm install -g teamai-cli",
+      "install_cmd": "git clone https://github.com/alibaba/open-code-review.git",
       "audience": [
-        "团队技术负责人",
-        "多 AI 工具用户",
-        "效能工具爱好者"
+        "团队 Tech Lead",
+        "后端工程师",
+        "开源维护者"
       ],
-      "comment": "腾讯下场做 AI 团队基建，说明『给 AI 管装备』是真刚需。",
-      "quote": "TeamAI manages your team's skills, rules, MCP, and knowledge across Claude Code, Codex, CodeBuddy, WorkBuddy, OpenCode, Cursor, and other AI agents."
+      "comment": "故意用精度换召回、少误报少噪音，这个取舍很清醒，比『什么都报』的审查工具实用。",
+      "quote": "over the past two years, it has served tens of thousands of developers and identified millions of code defects"
     },
     {
       "rank": 3,
-      "full_name": "obra/superpowers",
-      "selling": "28.4 万星验证过的方法论：让 AI 像样地干活",
-      "intro_zh": "给 coding agent 的一整套软件开发方法论：先聊成 spec 再写码，真红绿 TDD + 子代理分工，agent 能自主连续干几个小时不跑偏。支持 Claude Code、Codex、Cursor、Gemini CLI 等十几种工具。",
+      "full_name": "multimodal-art-projection/YuE",
+      "selling": "给歌词给风格，AI 先写谱再出声，整首歌直接交货",
+      "intro_zh": "YuE2 音乐生成升级版：先写出旋律与和弦的符号化编排，再渲染成带人声伴奏的完整歌曲。WildSongBench 上对标 Suno v5/v6，还支持零样本翻唱和对话式改歌——乐谱可读可改，生成不再是黑盒。",
       "highlights": [
-        "完整软件开发方法论：先逼出 spec，分块确认后再动工",
-        "真红绿 TDD、YAGNI、DRY 内置，agent 不瞎写",
-        "子代理驱动开发：agent 可自主连续工作数小时不偏离计划",
-        "支持 Claude Code、Codex、Cursor、Gemini CLI、OpenCode 等十几种工具"
+        "WildSongBench 上对标 Suno v5/v6，best-of-8 达 SongBench 均分 6.9632",
+        "符号化编排白盒生成：旋律和弦先出『谱』，可读可改再渲染",
+        "零样本翻唱：源曲转录成旋律谱后换风格重新演绎",
+        "Agent 编辑：对着乐谱、编曲、歌词对话式迭代改歌"
       ],
-      "install_cmd": "git clone https://github.com/obra/superpowers",
+      "install_cmd": "git clone https://github.com/multimodal-art-projection/YuE.git",
       "audience": [
-        "认真做项目的开发者",
-        "Agent 工作流玩家",
-        "技术团队 Leader"
+        "音乐创作者",
+        "AI 玩家",
+        "独立游戏开发者"
       ],
-      "comment": "模型越来越强，方法论反而是稀缺品——这仓库给 AI 上了班味十足的纪律。",
-      "quote": "An agentic skills framework & software development methodology that works."
+      "comment": "先出谱再出声的白盒思路比纯黑盒靠谱得多——想改副歌不用从头重来一遍。",
+      "quote": "Compose in symbols. Create in sound."
     },
     {
       "rank": 4,
-      "full_name": "pascalorg/editor",
-      "selling": "在浏览器里盖楼，还能让 AI Agent 帮你改图纸",
-      "intro_zh": "开源、本地优先的 3D 建筑编辑器，React Three Fiber + WebGPU 打造，浏览器或 CLI 都能跑。内置 MCP 服务，AI Agent 可以直接连接操作你的建筑模型。",
+      "full_name": "debpalash/VoiceStudio",
+      "selling": "今日暴涨 2776 星！本地版 ElevenLabs，不要账号不限用量",
+      "intro_zh": "开源、全本地的语音工作台：克隆声音、设计声音、视频配音、听写、转录、做有声书，全部在自己电脑上完成——不要账号、不要 API key、不限用量。646 种语言目录，16 个 TTS 引擎 + 11 个 ASR 引擎。",
       "highlights": [
-        "本地优先的开源 3D 建筑编辑器，WebGPU 渲染",
-        "浏览器里画，CLI 一条命令也能跑（npx @pascal-app/cli editor）",
-        "内置认证 MCP 服务，AI Agent 直连操作模型",
-        "项目数据存在本地 ~/.pascal，MIT 协议"
+        "646 种语言目录，16 TTS + 11 ASR 引擎随时切换",
+        "macOS / Windows / Linux / Docker 全平台，CUDA、Apple Silicon、ROCm、CPU 都能算",
+        "本地 REST/SSE/WebSocket API + OpenAI 兼容音频接口 + MCP Server",
+        "声音、项目、输出默认留在本机，本地工作流零账号零订阅"
       ],
-      "install_cmd": "npx @pascal-app/cli editor",
+      "install_cmd": "git clone https://github.com/debpalash/VoiceStudio.git",
       "audience": [
-        "建筑与空间设计师",
-        "3D 建模爱好者",
-        "AI Agent 开发者"
+        "有声书作者",
+        "视频博主",
+        "隐私敏感用户"
       ],
-      "comment": "建筑行业 Agent 化的速度超出想象，本地优先 + MCP 的组合很对路。",
-      "quote": "An open-source, local-first 3D building editor built with React Three Fiber and WebGPU. Run it in the browser or from the CLI, and connect AI agents through MCP."
+      "comment": "今日增速全场第一，『本地、免费、不限量』这六个字就是开源语音工具的流量密码。",
+      "quote": "No account, API key, subscription, or usage meter for the local workflow."
     },
     {
       "rank": 5,
-      "full_name": "earthtojake/text-to-cad",
-      "selling": "打字就能出 CAD 图纸，机械人的 AI 技能库",
-      "intro_zh": "给 AI Agent 用的 CAD/CAE/CAM 技能库：让 AI 直接产出工程图纸。支持 STEP/STL/3MF 导出、URDF 机器人建模、SDF 仿真，Python 3.11+，MIT 协议。",
+      "full_name": "666ghj/MiroFish",
+      "selling": "7.3 万星的神预测引擎：在数字沙盘里预演未来",
+      "intro_zh": "多智能体驱动的 AI 预测引擎：从新闻、政策草案、金融信号提取种子信息，自动构建高保真平行数字世界。数千个有独立人格、长期记忆、行为逻辑的 Agent 自由交互演化，上帝视角注入变量，推演未来走向。",
       "highlights": [
-        "面向 CAD/CAE/CAM 的 Agent 技能库，AI 直接出工程图",
-        "支持 STEP / STL / 3MF 导出，直达下游制造流程",
-        "附带 URDF 机器人、SDF 仿真、SRDF MoveIt2 技能",
-        "Python 3.11+，MIT 协议，附官方文档站"
+        "上传种子材料 + 自然语言描述需求，即可启动推演",
+        "数千 Agent 独立人格 + 长期记忆 + 行为逻辑，社会演化",
+        "上帝视角动态注入变量，精准推演未来轨迹",
+        "知识图谱 + Agent 记忆，覆盖金融预测等场景"
       ],
-      "install_cmd": "git clone https://github.com/earthtojake/text-to-cad",
+      "install_cmd": "git clone https://github.com/666ghj/MiroFish.git",
       "audience": [
-        "机械工程师",
-        "3D 打印创客",
-        "机器人开发者"
+        "AI 研究者",
+        "量化爱好者",
+        "世界模型玩家"
       ],
-      "comment": "CAD 的 Agent 化才刚开始，机械工程师现在上车正是时候。",
-      "quote": "A library of agent skills for CAD, CAE and CAM"
+      "comment": "7.3 万星说明人人都想『预测万物』，但沙盘推演再热闹，也别拿真金白银当实验变量。",
+      "quote": "rehearse the future in a digital sandbox, and win decisions after countless simulations"
     }
   ],
-  "copy": {
-    "title": "让 AI 直说答案的技能火了：一天暴涨 4650 星，专治废话",
-    "title_alts": [
-      "让 AI 直说答案的技能火了：一天暴涨 4650 星，专治废话",
-      "别再被 AI 的长篇大论气到关窗口，榜一项目一天涨了 4650 星",
-      "从盖楼到出 CAD 图纸，这 5 个开源项目正在重写你的工作流"
-    ],
-    "body": "今天不绕弯子，先说结论：GitHub 今天最火的项目，一天暴涨 4650 星，就为了干一件事——让 AI 闭嘴，直说答案。\n\n【🤐 废话终结者】ayghri/i-have-adhd，总星 3.46 万、今日 +4650，登顶榜一。它给编程助手立规矩：输出必须先给行动、砍掉客套话，专为注意力有限的人优化。装上之后，AI 的回复从大段铺垫变成可以直接抄的指令。\n\n【🧰 团队装备库】Tencent/teamai-cli，腾讯出品，今日 +556。一条命令把团队的 skills、rules、MCP 和知识库管起来，还跨 Claude Code、Codex、Cursor 等一堆 AI 工具统一分发——团队 repo 初始化后，每次 AI 会话自动拉最新配置，不用手动同步。\n\n【📕 AI 上班守则】obra/superpowers，28.4 万总星的经典还在涨（今日 +688）。它是一整套软件开发方法论：先逼 agent 把需求聊成 spec，再走真红绿 TDD，子代理分组干活，一跑就是几个小时不跑偏。\n\n【🏗️ 浏览器里盖楼】pascalorg/editor，今日 +107。开源的本地优先 3D 建筑编辑器，React Three Fiber + WebGPU 打造，浏览器里就能画，还内置 MCP 服务让 AI Agent 直接连上改图纸。\n\n【✏️ 打字出图纸】earthtojake/text-to-cad，今日 +124。面向 CAD/CAE/CAM 的 Agent 技能库，支持 STEP/STL/3MF 导出，还带 URDF 机器人和 SDF 仿真技能——机械工程师进 AI 时代的第一站。\n\n左滑看 5 张详情卡，上手命令都帮你抄好了。\n今天哪一个戳中了你？评论区站个队。\n\n【📣 关注我，每天播报 Github 最新的热门项目】",
-    "tags": [
-      "#GitHub",
-      "#开源项目",
-      "#AI编程",
-      "#程序员日常",
-      "#AIAgent",
-      "#智能体",
-      "#技能日报",
-      "#项目日报",
-      "#每天一个神仙技能",
-      "#每天一个Github热门项目",
-      "#大飞的AI赋能笔记",
-      "#AI",
-      "#skill",
-      "#技能",
-      "#workbuddy",
-      "#codex",
-      "#claudecode",
-      "#opencode",
-      "#openclaw",
-      "#hermes",
-      "#豆包",
-      "#deepseek"
-    ]
+  "copies": {
+    "xhs": {
+      "title": "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
+      "title_alts": [
+        "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
+        "别再为语音合成按字付费了，这个开源项目一天涨了 2776 星",
+        "从跑 2.8T 大模型到沙盘预测万物，今天这 5 个开源项目有点东西"
+      ],
+      "body": "今天不绕弯子，先说结论：今天 GitHub 涨得最猛的是 VoiceStudio——本地版 ElevenLabs，一天 +2776 星，声音克隆、视频配音、有声书全在自己电脑上跑，不要账号不要 key。\n\n【🔊 全场增速王】debpalash/VoiceStudio，总星 2.92 万、今日 +2776。646 种语言目录，16 个 TTS 引擎加 11 个 ASR 引擎随便切，还配了 OpenAI 兼容音频接口和 MCP Server——本地工作流零账号零订阅，这就是它一天涨 2776 星的底气。\n\n【🐦 小引擎扛大模型】JustVugg/colibri，今日 +2173 排榜一。纯 C、零依赖的推理引擎，把显存、内存、硬盘当成一整块分级存储，专家按需从硬盘流式读取——744B 到 2.8T 参数的前沿 MoE 模型，跑在你已有的硬件上。\n\n【👀 阿里祖传审查】alibaba/open-code-review，今日 +1571。阿里内部用了两年的 AI 代码审查助手，数万开发者、百万级缺陷检出验证后才开源。确定性流水线加 LLM Agent 混合架构，行级评论，同样基座模型下 F1 更高、token 只要约 1/9。\n\n【🎵 AI 写歌追平 Suno】multimodal-art-projection/YuE，今日 +559。YuE2 先写旋律加和弦的符号化乐谱，再渲染成带人声伴奏的完整歌，WildSongBench 上对标 Suno v5/v6，还能零样本翻唱、对话式改歌。\n\n【🔮 沙盘里预演未来】666ghj/MiroFish，7.31 万总星的体量今日还在涨（+560）。多智能体预测引擎：从新闻、政策、金融信号建一个平行数字世界，数千个有记忆有性格的 Agent 自由演化，上帝视角注入变量推演结局。\n\n左滑看 5 张详情卡，上手命令都帮你抄好了。\n今天哪一个戳中了你？评论区站个队。\n\n【📣 关注我，每天播报 Github 最新的热门项目】",
+      "tags": [
+        "GitHub",
+        "开源项目",
+        "AI编程",
+        "程序员日常",
+        "AIAgent",
+        "智能体",
+        "技能日报",
+        "项目日报",
+        "每天一个神仙技能",
+        "每天一个Github热门项目",
+        "大飞的AI赋能笔记",
+        "AI",
+        "skill",
+        "技能",
+        "workbuddy",
+        "codex",
+        "claudecode",
+        "opencode",
+        "openclaw",
+        "hermes",
+        "豆包",
+        "deepseek"
+      ]
+    },
+    "toutiao": {
+      "title": "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
+      "title_alts": [
+        "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
+        "别再为语音合成按字付费了，这个开源项目一天涨了 2776 星",
+        "从跑 2.8T 大模型到沙盘预测万物，今天这 5 个开源项目有点东西"
+      ],
+      "body": "今天不绕弯子，先说结论：今天 GitHub 涨得最猛的是 VoiceStudio——本地版 ElevenLabs，一天 +2776 星，声音克隆、视频配音、有声书全在自己电脑上跑，不要账号不要 key。\n\n【🔊 全场增速王】debpalash/VoiceStudio，总星 2.92 万、今日 +2776。646 种语言目录，16 个 TTS 引擎加 11 个 ASR 引擎随便切，还配了 OpenAI 兼容音频接口和 MCP Server——本地工作流零账号零订阅，这就是它一天涨 2776 星的底气。\n\n【🐦 小引擎扛大模型】JustVugg/colibri，今日 +2173 排榜一。纯 C、零依赖的推理引擎，把显存、内存、硬盘当成一整块分级存储，专家按需从硬盘流式读取——744B 到 2.8T 参数的前沿 MoE 模型，跑在你已有的硬件上。\n\n【👀 阿里祖传审查】alibaba/open-code-review，今日 +1571。阿里内部用了两年的 AI 代码审查助手，数万开发者、百万级缺陷检出验证后才开源。确定性流水线加 LLM Agent 混合架构，行级评论，同样基座模型下 F1 更高、token 只要约 1/9。\n\n【🎵 AI 写歌追平 Suno】multimodal-art-projection/YuE，今日 +559。YuE2 先写旋律加和弦的符号化乐谱，再渲染成带人声伴奏的完整歌，WildSongBench 上对标 Suno v5/v6，还能零样本翻唱、对话式改歌。\n\n【🔮 沙盘里预演未来】666ghj/MiroFish，7.31 万总星的体量今日还在涨（+560）。多智能体预测引擎：从新闻、政策、金融信号建一个平行数字世界，数千个有记忆有性格的 Agent 自由演化，上帝视角注入变量推演结局。\n\n左滑看 5 张详情卡，上手命令都帮你抄好了。\n今天哪一个戳中了你？评论区站个队。\n\n【📣 关注我，每天播报 Github 最新的热门项目】",
+      "tags": [
+        "GitHub",
+        "开源项目",
+        "AI编程",
+        "程序员日常",
+        "AIAgent",
+        "智能体",
+        "技能日报",
+        "项目日报",
+        "每天一个神仙技能",
+        "每天一个Github热门项目",
+        "大飞的AI赋能笔记",
+        "AI",
+        "skill",
+        "技能",
+        "workbuddy",
+        "codex",
+        "claudecode",
+        "opencode",
+        "openclaw",
+        "hermes",
+        "豆包",
+        "deepseek"
+      ]
+    },
+    "wechat": {
+      "title": "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
+      "title_alts": [
+        "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
+        "别再为语音合成按字付费了，这个开源项目一天涨了 2776 星",
+        "从跑 2.8T 大模型到沙盘预测万物，今天这 5 个开源项目有点东西"
+      ],
+      "body": "今天不绕弯子，先说结论：今天 GitHub 涨得最猛的是 VoiceStudio——本地版 ElevenLabs，一天 +2776 星，声音克隆、视频配音、有声书全在自己电脑上跑，不要账号不要 key。\n\n【🔊 全场增速王】debpalash/VoiceStudio，总星 2.92 万、今日 +2776。646 种语言目录，16 个 TTS 引擎加 11 个 ASR 引擎随便切，还配了 OpenAI 兼容音频接口和 MCP Server——本地工作流零账号零订阅，这就是它一天涨 2776 星的底气。\n\n【🐦 小引擎扛大模型】JustVugg/colibri，今日 +2173 排榜一。纯 C、零依赖的推理引擎，把显存、内存、硬盘当成一整块分级存储，专家按需从硬盘流式读取——744B 到 2.8T 参数的前沿 MoE 模型，跑在你已有的硬件上。\n\n【👀 阿里祖传审查】alibaba/open-code-review，今日 +1571。阿里内部用了两年的 AI 代码审查助手，数万开发者、百万级缺陷检出验证后才开源。确定性流水线加 LLM Agent 混合架构，行级评论，同样基座模型下 F1 更高、token 只要约 1/9。\n\n【🎵 AI 写歌追平 Suno】multimodal-art-projection/YuE，今日 +559。YuE2 先写旋律加和弦的符号化乐谱，再渲染成带人声伴奏的完整歌，WildSongBench 上对标 Suno v5/v6，还能零样本翻唱、对话式改歌。\n\n【🔮 沙盘里预演未来】666ghj/MiroFish，7.31 万总星的体量今日还在涨（+560）。多智能体预测引擎：从新闻、政策、金融信号建一个平行数字世界，数千个有记忆有性格的 Agent 自由演化，上帝视角注入变量推演结局。\n\n左滑看 5 张详情卡，上手命令都帮你抄好了。\n今天哪一个戳中了你？评论区站个队。\n\n【📣 关注我，每天播报 Github 最新的热门项目】",
+      "tags": [
+        "GitHub",
+        "开源项目",
+        "AI编程",
+        "程序员日常",
+        "AIAgent",
+        "智能体",
+        "技能日报",
+        "项目日报",
+        "每天一个神仙技能",
+        "每天一个Github热门项目",
+        "大飞的AI赋能笔记",
+        "AI",
+        "skill",
+        "技能",
+        "workbuddy",
+        "codex",
+        "claudecode",
+        "opencode",
+        "openclaw",
+        "hermes",
+        "豆包",
+        "deepseek"
+      ]
+    }
   }
 }
