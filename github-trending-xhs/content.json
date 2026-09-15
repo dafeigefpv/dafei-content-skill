@@ -108,105 +108,37 @@
       "quote": "rehearse the future in a digital sandbox, and win decisions after countless simulations"
     }
   ],
-  "copies": {
-    "xhs": {
-      "title": "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
-      "title_alts": [
-        "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
-        "别再为语音合成按字付费了，这个开源项目一天涨了 2776 星",
-        "从跑 2.8T 大模型到沙盘预测万物，今天这 5 个开源项目有点东西"
-      ],
-      "body": "今天不绕弯子，先说结论：今天 GitHub 涨得最猛的是 VoiceStudio——本地版 ElevenLabs，一天 +2776 星，声音克隆、视频配音、有声书全在自己电脑上跑，不要账号不要 key。\n\n【🔊 全场增速王】debpalash/VoiceStudio，总星 2.92 万、今日 +2776。646 种语言目录，16 个 TTS 引擎加 11 个 ASR 引擎随便切，还配了 OpenAI 兼容音频接口和 MCP Server——本地工作流零账号零订阅，这就是它一天涨 2776 星的底气。\n\n【🐦 小引擎扛大模型】JustVugg/colibri，今日 +2173 排榜一。纯 C、零依赖的推理引擎，把显存、内存、硬盘当成一整块分级存储，专家按需从硬盘流式读取——744B 到 2.8T 参数的前沿 MoE 模型，跑在你已有的硬件上。\n\n【👀 阿里祖传审查】alibaba/open-code-review，今日 +1571。阿里内部用了两年的 AI 代码审查助手，数万开发者、百万级缺陷检出验证后才开源。确定性流水线加 LLM Agent 混合架构，行级评论，同样基座模型下 F1 更高、token 只要约 1/9。\n\n【🎵 AI 写歌追平 Suno】multimodal-art-projection/YuE，今日 +559。YuE2 先写旋律加和弦的符号化乐谱，再渲染成带人声伴奏的完整歌，WildSongBench 上对标 Suno v5/v6，还能零样本翻唱、对话式改歌。\n\n【🔮 沙盘里预演未来】666ghj/MiroFish，7.31 万总星的体量今日还在涨（+560）。多智能体预测引擎：从新闻、政策、金融信号建一个平行数字世界，数千个有记忆有性格的 Agent 自由演化，上帝视角注入变量推演结局。\n\n左滑看 5 张详情卡，上手命令都帮你抄好了。\n今天哪一个戳中了你？评论区站个队。\n\n【📣 关注我，每天播报 Github 最新的热门项目】",
-      "tags": [
-        "GitHub",
-        "开源项目",
-        "AI编程",
-        "程序员日常",
-        "AIAgent",
-        "智能体",
-        "技能日报",
-        "项目日报",
-        "每天一个神仙技能",
-        "每天一个Github热门项目",
-        "大飞的AI赋能笔记",
-        "AI",
-        "skill",
-        "技能",
-        "workbuddy",
-        "codex",
-        "claudecode",
-        "opencode",
-        "openclaw",
-        "hermes",
-        "豆包",
-        "deepseek"
-      ]
-    },
-    "toutiao": {
-      "title": "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
-      "title_alts": [
-        "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
-        "别再为语音合成按字付费了，这个开源项目一天涨了 2776 星",
-        "从跑 2.8T 大模型到沙盘预测万物，今天这 5 个开源项目有点东西"
-      ],
-      "body": "今天不绕弯子，先说结论：今天 GitHub 涨得最猛的是 VoiceStudio——本地版 ElevenLabs，一天 +2776 星，声音克隆、视频配音、有声书全在自己电脑上跑，不要账号不要 key。\n\n【🔊 全场增速王】debpalash/VoiceStudio，总星 2.92 万、今日 +2776。646 种语言目录，16 个 TTS 引擎加 11 个 ASR 引擎随便切，还配了 OpenAI 兼容音频接口和 MCP Server——本地工作流零账号零订阅，这就是它一天涨 2776 星的底气。\n\n【🐦 小引擎扛大模型】JustVugg/colibri，今日 +2173 排榜一。纯 C、零依赖的推理引擎，把显存、内存、硬盘当成一整块分级存储，专家按需从硬盘流式读取——744B 到 2.8T 参数的前沿 MoE 模型，跑在你已有的硬件上。\n\n【👀 阿里祖传审查】alibaba/open-code-review，今日 +1571。阿里内部用了两年的 AI 代码审查助手，数万开发者、百万级缺陷检出验证后才开源。确定性流水线加 LLM Agent 混合架构，行级评论，同样基座模型下 F1 更高、token 只要约 1/9。\n\n【🎵 AI 写歌追平 Suno】multimodal-art-projection/YuE，今日 +559。YuE2 先写旋律加和弦的符号化乐谱，再渲染成带人声伴奏的完整歌，WildSongBench 上对标 Suno v5/v6，还能零样本翻唱、对话式改歌。\n\n【🔮 沙盘里预演未来】666ghj/MiroFish，7.31 万总星的体量今日还在涨（+560）。多智能体预测引擎：从新闻、政策、金融信号建一个平行数字世界，数千个有记忆有性格的 Agent 自由演化，上帝视角注入变量推演结局。\n\n左滑看 5 张详情卡，上手命令都帮你抄好了。\n今天哪一个戳中了你？评论区站个队。\n\n【📣 关注我，每天播报 Github 最新的热门项目】",
-      "tags": [
-        "GitHub",
-        "开源项目",
-        "AI编程",
-        "程序员日常",
-        "AIAgent",
-        "智能体",
-        "技能日报",
-        "项目日报",
-        "每天一个神仙技能",
-        "每天一个Github热门项目",
-        "大飞的AI赋能笔记",
-        "AI",
-        "skill",
-        "技能",
-        "workbuddy",
-        "codex",
-        "claudecode",
-        "opencode",
-        "openclaw",
-        "hermes",
-        "豆包",
-        "deepseek"
-      ]
-    },
-    "wechat": {
-      "title": "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
-      "title_alts": [
-        "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
-        "别再为语音合成按字付费了，这个开源项目一天涨了 2776 星",
-        "从跑 2.8T 大模型到沙盘预测万物，今天这 5 个开源项目有点东西"
-      ],
-      "body": "今天不绕弯子，先说结论：今天 GitHub 涨得最猛的是 VoiceStudio——本地版 ElevenLabs，一天 +2776 星，声音克隆、视频配音、有声书全在自己电脑上跑，不要账号不要 key。\n\n【🔊 全场增速王】debpalash/VoiceStudio，总星 2.92 万、今日 +2776。646 种语言目录，16 个 TTS 引擎加 11 个 ASR 引擎随便切，还配了 OpenAI 兼容音频接口和 MCP Server——本地工作流零账号零订阅，这就是它一天涨 2776 星的底气。\n\n【🐦 小引擎扛大模型】JustVugg/colibri，今日 +2173 排榜一。纯 C、零依赖的推理引擎，把显存、内存、硬盘当成一整块分级存储，专家按需从硬盘流式读取——744B 到 2.8T 参数的前沿 MoE 模型，跑在你已有的硬件上。\n\n【👀 阿里祖传审查】alibaba/open-code-review，今日 +1571。阿里内部用了两年的 AI 代码审查助手，数万开发者、百万级缺陷检出验证后才开源。确定性流水线加 LLM Agent 混合架构，行级评论，同样基座模型下 F1 更高、token 只要约 1/9。\n\n【🎵 AI 写歌追平 Suno】multimodal-art-projection/YuE，今日 +559。YuE2 先写旋律加和弦的符号化乐谱，再渲染成带人声伴奏的完整歌，WildSongBench 上对标 Suno v5/v6，还能零样本翻唱、对话式改歌。\n\n【🔮 沙盘里预演未来】666ghj/MiroFish，7.31 万总星的体量今日还在涨（+560）。多智能体预测引擎：从新闻、政策、金融信号建一个平行数字世界，数千个有记忆有性格的 Agent 自由演化，上帝视角注入变量推演结局。\n\n左滑看 5 张详情卡，上手命令都帮你抄好了。\n今天哪一个戳中了你？评论区站个队。\n\n【📣 关注我，每天播报 Github 最新的热门项目】",
-      "tags": [
-        "GitHub",
-        "开源项目",
-        "AI编程",
-        "程序员日常",
-        "AIAgent",
-        "智能体",
-        "技能日报",
-        "项目日报",
-        "每天一个神仙技能",
-        "每天一个Github热门项目",
-        "大飞的AI赋能笔记",
-        "AI",
-        "skill",
-        "技能",
-        "workbuddy",
-        "codex",
-        "claudecode",
-        "opencode",
-        "openclaw",
-        "hermes",
-        "豆包",
-        "deepseek"
-      ]
-    }
+  "copy": {
+    "title": "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
+    "title_alts": [
+      "本地版 ElevenLabs 一天狂揽 2776 星：声音克隆配音全免费",
+      "别再为语音合成按字付费了，这个开源项目一天涨了 2776 星",
+      "从跑 2.8T 大模型到沙盘预测万物，今天这 5 个开源项目有点东西"
+    ],
+    "body": "今天不绕弯子，先说结论：今天 GitHub 涨得最猛的是 VoiceStudio——本地版 ElevenLabs，一天 +2776 星，声音克隆、视频配音、有声书全在自己电脑上跑，不要账号不要 key。\n\n【🔊 全场增速王】debpalash/VoiceStudio，总星 2.92 万、今日 +2776。646 种语言目录，16 个 TTS 引擎加 11 个 ASR 引擎随便切，还配了 OpenAI 兼容音频接口和 MCP Server——本地工作流零账号零订阅，这就是它一天涨 2776 星的底气。\n\n【🐦 小引擎扛大模型】JustVugg/colibri，今日 +2173 排榜一。纯 C、零依赖的推理引擎，把显存、内存、硬盘当成一整块分级存储，专家按需从硬盘流式读取——744B 到 2.8T 参数的前沿 MoE 模型，跑在你已有的硬件上。\n\n【👀 阿里祖传审查】alibaba/open-code-review，今日 +1571。阿里内部用了两年的 AI 代码审查助手，数万开发者、百万级缺陷检出验证后才开源。确定性流水线加 LLM Agent 混合架构，行级评论，同样基座模型下 F1 更高、token 只要约 1/9。\n\n【🎵 AI 写歌追平 Suno】multimodal-art-projection/YuE，今日 +559。YuE2 先写旋律加和弦的符号化乐谱，再渲染成带人声伴奏的完整歌，WildSongBench 上对标 Suno v5/v6，还能零样本翻唱、对话式改歌。\n\n【🔮 沙盘里预演未来】666ghj/MiroFish，7.31 万总星的体量今日还在涨（+560）。多智能体预测引擎：从新闻、政策、金融信号建一个平行数字世界，数千个有记忆有性格的 Agent 自由演化，上帝视角注入变量推演结局。\n\n左滑看 5 张详情卡，上手命令都帮你抄好了。\n今天哪一个戳中了你？评论区站个队。\n\n【📣 关注我，每天播报 Github 最新的热门项目】",
+    "tags": [
+      "GitHub",
+      "开源项目",
+      "AI编程",
+      "程序员日常",
+      "AIAgent",
+      "智能体",
+      "技能日报",
+      "项目日报",
+      "每天一个神仙技能",
+      "每天一个Github热门项目",
+      "大飞的AI赋能笔记",
+      "AI",
+      "skill",
+      "技能",
+      "workbuddy",
+      "codex",
+      "claudecode",
+      "opencode",
+      "openclaw",
+      "hermes",
+      "豆包",
+      "deepseek"
+    ]
   }
 }
