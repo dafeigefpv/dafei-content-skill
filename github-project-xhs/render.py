@@ -185,6 +185,14 @@ def shot_with_overflow_check(page, html, w, h, out):
     if natural > h + 2:
         scale = max(0.70, h / natural)
         page.evaluate(f"document.body.style.zoom='{scale:.3f}'")
+        # zoom 会把宽高都同比缩小（右侧/底部留白）：反向放大卡片宽高补偿，
+        # 加宽后换行减少内容变矮，高度必须钉回 h/scale 让 space-between 铺满
+        comp_w = int(round(w / scale))
+        comp_h = int(round(h / scale))
+        page.evaluate(
+            "(function(){var c=document.getElementById('card')||document.querySelector('.cover');"
+            "document.body.style.width='" + str(comp_w) + "px';"
+            "if(c){c.style.width='" + str(comp_w) + "px';c.style.height='" + str(comp_h) + "px';}})()")
         if scale <= 0.70 + 1e-9:
             print(f"[warn] {out.name} 内容仍超高（zoom={scale:.2f}），请精简文案", file=sys.stderr)
     page.screenshot(path=str(out), clip={"x": 0, "y": 0, "width": w, "height": h})

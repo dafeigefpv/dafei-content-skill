@@ -287,6 +287,14 @@ def shot_with_overflow_check(page, html, w, h, out):
         page.evaluate(f"document.body.style.zoom='{scale:.3f}'")
     else:
         print(f"[warn] {out.name} 内容仍超高（zoom={scale:.2f}），请检查文案长度", file=sys.stderr)
+    if scale < 1.0:
+        # zoom 会把宽高都同比缩小（右侧/底部留白）：反向放大卡片宽高补偿
+        comp_w = int(round(w / scale))
+        comp_h = int(round(h / scale))
+        page.evaluate(
+            "(function(){var c=document.getElementById('card')||document.querySelector('.cover');"
+            "document.body.style.width='" + str(comp_w) + "px';"
+            "if(c){c.style.width='" + str(comp_w) + "px';c.style.height='" + str(comp_h) + "px';}})()")
     page.screenshot(path=str(out), clip={"x": 0, "y": 0, "width": w, "height": h})
     return scale
 

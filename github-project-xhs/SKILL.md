@@ -64,4 +64,5 @@ description: GitHub 单项目深度报道 → 小红书图文的执行规范。�
 ## 已知坑位（改 render.py 前必读）
 
 1. **溢出检测必须量卡片内部**：`.card` 是固定高度 + overflow:hidden，body scrollHeight 量不到裁切。现方案：截图前把卡片 height 设为 auto 实测内容高，一步算出 zoom（低于 0.70 告警）。卡片 div 必须带 `id="card"`
-2. 二维码已整体移除（2026-09-09）；若将来要恢复，必须 base64 data URI 内嵌（Chromium 禁止截图页加载 file:// 图片）。3. README 抓取走 API `/readme`（raw accept），失败不阻塞，创作降级用 description/事实字段；4. 渲染后**必须目检至少 01 页**——chips/topics 样式曾因漏 CSS 缩成小字，zoom 校验发现不了这类问题；5. 封面 `cover_headline`/`cover_quote` 里的换行写 `<br>`（accent_html 会放行），但**尖括号其他用途会被转义成字面量**
+2. **zoom 缩放必须做宽高反向补偿（2026-09-15 修复）**：对 body 施加 zoom<1 时卡片宽高同比缩小 → 右侧+底部大片留白（02 页曾只占 825/1080 宽）。修复＝zoom 后 `body.width=w/scale`、`card.width=w/scale`、`card.height=h/scale`（**高度必须钉回**：加宽后换行减少内容变矮，不钉高会底部露白，space-between 也能重新铺满）。trending 版 render.py 已同步修复。像素验收：内容列范围应到 ~1078、行范围到 ~1918。注意 f-string 里写 JS 的 `}}` 极易语法翻车，用 str 拼接
+3. 二维码已整体移除（2026-09-09）；若将来要恢复，必须 base64 data URI 内嵌（Chromium 禁止截图页加载 file:// 图片）。4. README 抓取走 API `/readme`（raw accept），失败不阻塞，创作降级用 description/事实字段；5. 渲染后**必须目检至少 01 页**——chips/topics 样式曾因漏 CSS 缩成小字，zoom 校验发现不了这类问题；6. 封面 `cover_headline`/`cover_quote` 里的换行写 `<br>`（accent_html 会放行），但**尖括号其他用途会被转义成字面量**

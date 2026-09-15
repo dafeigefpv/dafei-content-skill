@@ -57,4 +57,5 @@ description: GitHub Trending → 小红书图文每日流水线的执行规范�
 - trending 抓取重试 3 次；解析仓库数 <5 直接报错（解析器失效需人工修）
 - GitHub API 限流时字段降级为 0/空，卡片仍可出图
 - render 溢出自动缩放最多 5 级，仍超限则在 stderr 告警——告警时应精简文案而非改版式
+- **zoom 缩放必须做宽高反向补偿（2026-09-15 修复）**：对 body 施加 zoom<1 时卡片宽高同比缩小 → 右侧+底部留白。修复＝zoom 后 `body.width=w/scale`、`card.width=w/scale`、`card.height=h/scale`；像素验收：内容列范围应到 ~1078、行范围到 ~1918（project-xhs 版已同步修复，详见其 SKILL.md）
 - 执行记录写入 `.workbuddy/memory/automations/<automation-id>/memory.md`（只记摘要，不贴全文）
