@@ -1,6 +1,6 @@
 # dafei-content-skill
 
-GitHub → 小红书图文内容流水线技能集（@大飞的AI赋能笔记）。包含两个 WorkBuddy Agent Skill，均以单个 `SKILL.md` 固化完整执行规范。
+GitHub → 小红书图文内容流水线技能集（@大飞的AI赋能笔记）。包含三个 WorkBuddy Agent Skill，均以单个 `SKILL.md` 固化完整执行规范。
 
 ## 技能列表
 
@@ -20,6 +20,15 @@ GitHub → 小红书图文内容流水线技能集（@大飞的AI赋能笔记）
 - skills-daily 风格封面：格子纸底 + 橙色项目日报徽章 + 终端窗 + 星标/Fork/贡献者黑卡 + 亮点事实白卡
 - 编辑部编号栏目：01 解决什么问题 / 02 核心亮点 / 03 三步上手（含小白 agent 指令）/ 04 适合谁 / 05 同类对比
 - 数据分区红线：封面与详情页信息零重复
+
+### 3. [github-repo-video](./github-repo-video/) — GitHub 项目口播短视频
+
+手动触发：把 `github-project-xhs` / `github-trending-xhs` 的文案转成 **3:4 竖屏 MP4（1440×1920）+ 3:4 封面**。核心「旁白驱动一切」——一个语义块 = 一屏画面 = 一条字幕 = 一个动画触发点。
+
+- 八步流水线：`voice_synth`（edge-tts 旁白）→ `build_video`（12 屏 HTML+逐块动画）→ `check_fill`（半屏空检测）→ `measure_subs`（字幕行数）→ `probe_frames`（探针帧）→ `hyperframes render`（Node）→ `mux`（混音+loudnorm）→ `fix_cover`（去水印+补页脚+体检）
+- 两个强制确认节点：① 口播稿定稿后展示给用户确认；② 封面生图前展示提示词摘要+积分消耗（约 5–10）确认
+- 封面分工铁律：页脚/徽章/水印只由 `fix_cover.py` 后期补，生图提示词一律不写
+- 依赖：Node 端 `hyperframes`（pin 0.8.44，项目内 `node_modules`）+ Python `edge-tts`；渲染必须 `--no-browser-gpu`
 
 ## 定版文案规范（两技能共用）
 
